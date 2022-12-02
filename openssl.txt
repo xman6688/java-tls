@@ -67,3 +67,8 @@ Verify the client certificate:
 openssl verify -CAfile ca-cert.pem \
    ca-cert.pem \
    client-cert.pem
+
+
+
+
+
