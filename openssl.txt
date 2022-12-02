@@ -72,3 +72,9 @@ openssl verify -CAfile ca-cert.pem \
 
 
 
+
+
+
+# generate the private key and the cert file 
+openssl req -newkey rsa:2048 -nodes -keyout domain.key -x509 -days 365 -out domain.crt
+
