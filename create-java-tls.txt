@@ -7,7 +7,8 @@ Since Java 9, the default keystore format is PKCS12. The biggest difference betw
 
 
 
-A Java keystore stores private key entries, certificates with public keys, or just secret keys that we may use for various cryptographic purposes. It stores each by an alias for ease of lookup.
+A Java keystore stores private key entries, certificates with public keys, or just secret keys that we may use for various cryptographic purposes. 
+It stores each by an alias for ease of lookup.
 
 Generally speaking, keystores hold keys that our application owns, which we can use to prove the integrity of a message and the authenticity of the sender, say by signing payloads.
 
@@ -39,13 +40,14 @@ Use an [alias] and [path] of your choice.
 
 
 keytool -genkey -alias tomcat -keyalg RSA
-
+keytool -genkey -alias tomcat -keyalg RSA -keystore /tmp/.keystore
 
 
 keytool -list -v
 
 
 keytool -export -alias tomcat -file mycert.cert
+keytool -export -alias tomcat -keystore /tmp/.keystore -file mycert.cert
 
 keytool -printcert -file mycert.cert
 
