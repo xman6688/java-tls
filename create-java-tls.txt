@@ -1,3 +1,9 @@
+In most cases, we use a keystore and a truststore when our application needs to communicate over SSL/TLS.
+
+
+
+
+
 keytool -genkey -alias tomcat -keyalg RSA
 
 
