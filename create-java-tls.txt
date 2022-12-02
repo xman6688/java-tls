@@ -9,4 +9,3 @@ keytool -genkey -alias tomcat -keyalg RSA
 
 
 keytool -list -v
-keytool -list -v -storepass password
