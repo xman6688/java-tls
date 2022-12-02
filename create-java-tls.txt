@@ -53,5 +53,5 @@ keytool -printcert -file mycert.cert
 
 
 # genereate truststore
-keytool -import -file mycert.cert -alias firstCA -keystore myTrustStore
+keytool -import -file mycert.cert -alias firstCA -keystore .truststore
 
