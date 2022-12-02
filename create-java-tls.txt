@@ -33,7 +33,7 @@ We, the client, then look up the associated certificate in our truststore. If th
 
 
 
-
+# generate keystore
 $JAVA_HOME/bin/keytool -genkey -alias [youralias] -keyalg RSA -keystore [/preferred/keystore/path]
 Use an [alias] and [path] of your choice.
 
@@ -48,3 +48,8 @@ keytool -list -v
 keytool -export -alias tomcat -file mycert.cert
 
 keytool -printcert -file mycert.cert
+
+
+# genereate truststore
+keytool -import -file mycert.cert -alias firstCA -keystore myTrustStore
+
