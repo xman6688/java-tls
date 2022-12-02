@@ -43,3 +43,6 @@ keytool -genkey -alias tomcat -keyalg RSA
 
 
 keytool -list -v
+
+
+keytool -export -alias tomcat -file mycert.cert
