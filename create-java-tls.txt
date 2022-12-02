@@ -7,6 +7,18 @@ Since Java 9, the default keystore format is PKCS12. The biggest difference betw
 
 
 
+A Java keystore stores private key entries, certificates with public keys, or just secret keys that we may use for various cryptographic purposes. It stores each by an alias for ease of lookup.
+
+Generally speaking, keystores hold keys that our application owns, which we can use to prove the integrity of a message and the authenticity of the sender, say by signing payloads.
+
+Usually, we'll use a keystore when we're a server and want to use HTTPS. During an SSL handshake, the server looks up the private key from the keystore, and presents its corresponding public key and certificate to the client.
+
+Similarly, if the client also needs to authenticate itself, a situation called mutual authentication, then the client also has a keystore and also presents its public key and certificate.
+
+
+
+
+
 
 
 
